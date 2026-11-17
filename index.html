@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sara C. Schvartzman — Robotics &amp; Simulation</title>
+  <meta name="description" content="Robotics and physics simulation work by Sara C. Schvartzman: collision detection, haptics, real-time systems and robot learning in simulation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Sara C. Schvartzman</a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#past-work">Past work</a>
+      <a href="#research">Research</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero wrap">
+    <p class="eyebrow">Robotics · Physics simulation · Real-time systems</p>
+    <h1>Bringing physics simulation back to the real world.</h1>
+    <p class="lede">
+      I'm a software engineer with a PhD in accelerating collision detection and fracture simulation,
+      a postdoc in haptics at Stanford, and 15 years building high-performance tools for film and games.
+      This page collects my robotics work: simulation, robot learning and the physics underneath it.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">See the projects</a>
+      <a class="btn" href="cv.pdf">Download CV</a>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section wrap">
+    <h2>Robotics projects</h2>
+    <p class="section-intro">Simulation-first robotics demos. Each one links to its code and a video.</p>
+
+    <div class="cards">
+
+      <!--
+        HOW TO ADD A PROJECT
+        Copy one <article class="card"> ... </article> block and edit it.
+        For the video, replace VIDEO_ID with the part after "v=" in the YouTube URL
+        (e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ  ->  dQw4w9WgXcQ).
+      -->
+
+      <article class="card">
+        <div class="video" data-youtube="VIDEO_ID">
+          <div class="video-placeholder">Video coming soon</div>
+        </div>
+        <div class="card-body">
+          <h3>Dexterous in-hand manipulation in Isaac Lab</h3>
+          <p class="tags"><span>Isaac Lab</span><span>Reinforcement learning</span><span>Kuka + Allegro hand</span></p>
+          <p>
+            <!-- TODO: 2–3 sentences: what the task is, what you trained or changed, what you learned. -->
+            Training a Kuka arm with an Allegro hand on the DexSuite dexterous manipulation tasks in NVIDIA Isaac Lab,
+            and comparing how physics engine choices affect the learned behaviour.
+          </p>
+          <p class="links">
+            <a href="https://github.com/arassch/dexterity-physics-engines">Code on GitHub →</a>
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ PAST WORK ============ -->
+  <section id="past-work" class="section wrap">
+    <h2>Selected past work</h2>
+    <p class="section-intro">Earlier projects in haptics, computer vision and physics simulation.</p>
+
+    <div class="cards">
+
+      <article class="card featured">
+        <div class="video" data-youtube="VIDEO_ID">
+          <div class="video-placeholder">Video coming soon</div>
+        </div>
+        <div class="card-body">
+          <p class="kicker">Stanford Robotics Lab · 2013–2014</p>
+          <h3>Haptic surgical simulation for facial trauma</h3>
+          <p class="tags"><span>Haptic rendering</span><span>Force feedback</span><span>Collision &amp; contact</span><span>Surgical simulation</span><span>Medical training</span></p>
+          <p>
+            A computer-aided trauma simulation system, built with surgeons, in which they manipulate virtual bone fragments
+            through haptic devices, with real-time force feedback from contact and collisions. It was used to plan jaw fracture repair operations and to train surgeons.
+          </p>
+          <p>
+            User studies showed that haptic feedback improved surgeons' experience and the accuracy of fracture reduction,
+            and that the system was easy and fast for oral-maxillofacial surgeons to learn and use.
+          </p>
+          <p class="links">
+            <!-- TODO: link the two papers -->
+            <a href="#">Journal of Rehabilitation Research and Development, 2015 →</a><br>
+            <a href="#">Journal of Oral and Maxillofacial Surgery, 2014 →</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="card featured">
+        <div class="video" data-youtube="VIDEO_ID">
+          <div class="video-placeholder">Video coming soon</div>
+        </div>
+        <div class="card-body">
+          <p class="kicker">PhD · Universidad Rey Juan Carlos · 2010–2013</p>
+          <h3>Data-driven fracture simulation</h3>
+          <p class="tags"><span>Fracture</span><span>Voronoi diagrams</span><span>Synthetic data</span><span>Machine learning</span></p>
+          <p>
+            Generated a synthetic training set from physics simulation and used machine learning to accelerate
+            physics-aware brittle fracture based on high-dimensional Voronoi diagrams, producing realistic fracture patterns at interactive rates.
+          </p>
+          <p class="links">
+            <!-- TODO: link the papers -->
+            <a href="#">Journal of Computer Graphics Techniques, 2014 →</a><br>
+            <a href="#">ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games (I3D), 2014 →</a>
+          </p>
+        </div>
+      </article>
+
+      <div class="mini-cards">
+        <article class="mini">
+          <div class="video" data-youtube="VIDEO_ID">
+            <div class="video-placeholder">Video coming soon</div>
+          </div>
+          <div class="card-body">
+            <p class="kicker">MPC</p>
+            <h3>Multi-camera facial capture</h3>
+            <p>Multi-view tracking of the head pose (6-DoF) and facial control points, with optimisation-based fitting of animation curves to the tracking.</p>
+          </div>
+        </article>
+        <article class="mini">
+          <div class="video" data-youtube="VIDEO_ID">
+            <div class="video-placeholder">Video coming soon</div>
+          </div>
+          <div class="card-body">
+            <p class="kicker">MPC · used in production</p>
+            <h3>Online facial model adaptation</h3>
+            <p>Implemented <em>Online Modeling for Realtime Facial Animation</em> (Bouaziz et al.), extracting animation curves from animated meshes and iteratively optimising the blendshapes.</p>
+          </div>
+        </article>
+        <article class="mini">
+          <div class="video" data-youtube="VIDEO_ID">
+            <div class="video-placeholder">Video coming soon</div>
+          </div>
+          <div class="card-body">
+            <p class="kicker">MPC</p>
+            <h3>Facial physics: muscle and fat</h3>
+            <p>Learned facial muscle regions by k-means clustering on eigenvectors (PCA) of the blendshapes, grouping vertices that move similarly, then added muscle and fat soft-tissue simulation using FEM, projective dynamics and position-based dynamics.</p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section id="research" class="section wrap">
+    <h2>Background in simulation and haptics</h2>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <p class="tl-when">2013–2014</p>
+        <div>
+          <h3>Postdoctoral Scholar, Stanford University</h3>
+          <p class="muted">Salisbury Robotics Lab</p>
+          <p>Haptic surgical simulation, built with surgeons and used for planning jaw fracture repair and for surgical training.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <p class="tl-when">2010–2013</p>
+        <div>
+          <h3>PhD Computer Science, Universidad Rey Juan Carlos</h3>
+          <p class="muted">Supervised by Miguel A. Otaduy</p>
+          <p>Thesis: <em>Accelerated Proximity Queries for Collision Detection and Brittle Fracture</em>.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <p class="tl-when">2014–present</p>
+        <div>
+          <h3>Industry R&amp;D: Framestore, MPC, Epic Games</h3>
+          <p>Rigid-body and fracture simulation tools (Framestore); multi-camera facial capture, online facial model adaptation and deformable muscle and fat simulation (MPC);
+            the virtual machine and compiler behind Unreal Engine's graph-based rigging system, which evaluates kinematic hierarchies including forward and inverse kinematics (Epic Games).</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub">Selected publications</h3>
+    <!-- TODO: replace each href="#" with a link to the paper (publisher page, PDF or project page). -->
+    <ul class="pubs">
+      <li>
+        <a href="#">Haptic Feedback Improves Surgeons' User Experience and Fracture Reduction in Facial Trauma Simulation</a>
+        <span class="muted">Girod, Schvartzman, Gaudilliere, Salisbury, Silva. Journal of Rehabilitation Research and Development, 2015.</span>
+      </li>
+      <li>
+        <a href="#">A Computer-Aided Trauma Simulation System with Haptic Feedback is Easy and Fast for Oral-Maxillofacial Surgeons to Learn and Use</a>
+        <span class="muted">Schvartzman, Silva, Salisbury, Gaudilliere, Girod. Journal of Oral and Maxillofacial Surgery, 2014.</span>
+      </li>
+      <li>
+        <a href="#">Physics-Aware Voronoi Fracture with Example-Based Acceleration</a>
+        <span class="muted">Schvartzman, Otaduy. Journal of Computer Graphics Techniques, 2014.</span>
+      </li>
+      <li>
+        <a href="#">Fracture Animation Based on High-Dimensional Voronoi Diagrams</a>
+        <span class="muted">Schvartzman, Otaduy. ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games, 2014.</span>
+      </li>
+      <li>
+        <a href="#">Star-Contours for Efficient Hierarchical Self-Collision Detection</a>
+        <span class="muted">Schvartzman, Pérez, Otaduy. ACM SIGGRAPH, 2010.</span>
+      </li>
+      <li>
+        <a href="#">Example-based Data Optimization for Facial Simulation</a>
+        <span class="muted">Schvartzman, Romeo. ACM SIGGRAPH Poster, 2016.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section wrap about">
+    <h2>About</h2>
+    <p>
+      After 15 years building virtual worlds for film and games, I want to bring that work back to the real world.
+      My background covers the computational problems underneath robotics: collision detection and proximity queries,
+      rigid-body and deformable simulation, haptic rendering, and fast, memory-efficient real-time systems in C++.
+    </p>
+    <p>
+      I'm now focused on simulation for robotics and on training robot policies in simulation, and I'm based in London.
+    </p>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section wrap">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt><dd>C/C++, Python, Matlab</dd>
+      <dt>Physics simulation</dt><dd>Rigid-body dynamics, contact and collision detection (bounding volume hierarchies, proximity queries), fracture, deformable and soft-tissue simulation (FEM, projective dynamics, position-based dynamics), haptic rendering and force feedback</dd>
+      <dt>Robotics</dt><dd>Forward and inverse kinematics, kinematic hierarchies, NVIDIA Isaac Lab, reinforcement learning</dd>
+      <dt>Vision &amp; optimisation</dt><dd>OpenCV, multi-camera tracking, pose estimation, model fitting, PCA, k-means clustering, synthetic data</dd>
+      <dt>Real-time systems</dt><dd>Compilers and virtual machines, data-oriented design, performance and memory optimisation</dd>
+      <dt>Parallel &amp; ML</dt><dd>CUDA, Metal, OpenCL, OpenMP, TensorFlow</dd>
+      <dt>Tools</dt><dd>Linux, Docker, Git, Jenkins (CI), GoogleTest, gRPC, ZeroMQ, Qt, AI coding agents (Claude Code)</dd>
+    </dl>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section wrap contact">
+    <h2>Contact</h2>
+    <ul class="contact-links">
+      <li><a href="mailto:sara.schvartzman@gmail.com">sara.schvartzman@gmail.com</a></li>
+      <li><a href="https://uk.linkedin.com/pub/sara-c-schvartzman/24/48/42a">LinkedIn</a></li>
+      <li><a href="https://github.com/arassch">GitHub</a></li>
+      <li><a href="https://www.youtube.com/channel/UCDs0qXKEm8jtT4Xqbw-Iwyg">YouTube</a></li>
+      <li><a href="cv.pdf">CV (PDF)</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="wrap footer">
+  <p class="muted">© Sara C. Schvartzman</p>
+</footer>
+
+<script>
+  // Turn each .video[data-youtube] into a click-to-play YouTube embed.
+  // Shows the thumbnail first so the page loads fast; loads the player on click.
+  document.querySelectorAll('.video[data-youtube]').forEach(function (el) {
+    var id = el.getAttribute('data-youtube');
+    if (!id || id === 'VIDEO_ID') return; // keep the "coming soon" placeholder
+    el.innerHTML =
+      '<button class="video-thumb" aria-label="Play video" style="background-image:url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)">' +
+      '<span class="play"></span></button>';
+    el.querySelector('button').addEventListener('click', function () {
+      el.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
+        '?autoplay=1&rel=0" title="Project video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    });
+  });
+</script>
+</body>
+</html>
