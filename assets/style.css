@@ -93,7 +93,7 @@ h3 { font-size: 1.1rem; margin: 0 0 6px; }
 
 /* Smaller cards, three across on wide screens */
 .mini-cards { display: grid; gap: 20px; grid-template-columns: 1fr; }
-@media (min-width: 760px) { .mini-cards { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 760px) { .mini-cards { grid-template-columns: repeat(2, 1fr); } }
 .mini {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
 }
