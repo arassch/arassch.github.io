@@ -126,11 +126,30 @@
         </div>
       </article>
 
+      <article class="card featured">
+        <div class="video" data-youtube="GG-GB_gIa3A">
+          <div class="video-placeholder">Video coming soon</div>
+        </div>
+        <div class="card-body">
+          <p class="kicker">MPC · SIGGRAPH 2016 poster</p>
+          <h3>Facial physics: muscle, fat and inverse simulation</h3>
+          <p class="tags"><span>FEM</span><span>Inverse simulation</span><span>Levenberg-Marquardt</span><span>Parameter estimation</span><span>PCA / k-means</span></p>
+          <p>
+            Added physically based soft tissue to blendshape-driven facial animation, so the face responds to collisions and inertia
+            while staying faithful to the animators' expressions.
+          </p>
+          <p>
+            From artist-sculpted blendshapes, built a tetrahedral FEM model of the tissue between skin and skull, and estimated control
+            forces and Neo-Hookean material parameters with regularised Levenberg-Marquardt (nonlinear least squares). Facial muscle regions
+            were learned by k-means clustering on eigenvectors (PCA) of the blendshapes, and the muscle and fat simulation was implemented
+            with FEM, projective dynamics and position-based dynamics.
+          </p>
+          <p class="links"><a href="https://history.siggraph.org/wp-content/uploads/2022/10/2016-Poster-66-Schvartzman_Example-Based-Data-Optimization-for-Facial-Simulation.pdf">SIGGRAPH 2016 poster (PDF) →</a></p>
+        </div>
+      </article>
+
       <div class="mini-cards">
         <article class="mini">
-          <div class="video" data-youtube="VIDEO_ID">
-            <div class="video-placeholder">Video coming soon</div>
-          </div>
           <div class="card-body">
             <p class="kicker">MPC</p>
             <h3>Multi-camera facial capture</h3>
@@ -138,34 +157,10 @@
           </div>
         </article>
         <article class="mini">
-          <div class="video" data-youtube="VIDEO_ID">
-            <div class="video-placeholder">Video coming soon</div>
-          </div>
           <div class="card-body">
             <p class="kicker">MPC · used in production</p>
             <h3>Online facial model adaptation</h3>
             <p>Implemented <em>Online Modeling for Realtime Facial Animation</em> (Bouaziz et al.), extracting animation curves from animated meshes and iteratively optimising the blendshapes.</p>
-          </div>
-        </article>
-        <article class="mini">
-          <div class="video" data-youtube="VIDEO_ID">
-            <div class="video-placeholder">Video coming soon</div>
-          </div>
-          <div class="card-body">
-            <p class="kicker">MPC</p>
-            <h3>Facial physics: muscle and fat</h3>
-            <p>Learned facial muscle regions by k-means clustering on eigenvectors (PCA) of the blendshapes, grouping vertices that move similarly, then added muscle and fat soft-tissue simulation using FEM, projective dynamics and position-based dynamics.</p>
-          </div>
-        </article>
-        <article class="mini">
-          <div class="video" data-youtube="GG-GB_gIa3A">
-            <div class="video-placeholder">Video coming soon</div>
-          </div>
-          <div class="card-body">
-            <p class="kicker">MPC · SIGGRAPH 2016 poster</p>
-            <h3>Example-based data optimization for facial simulation</h3>
-            <p>From artist-sculpted blendshapes, built a tetrahedral FEM model of the tissue between skin and skull, then estimated control forces and Neo-Hookean material parameters with regularised Levenberg-Marquardt (nonlinear least squares) so the simulation reproduces the animators' expressions. At runtime the face responds to collisions and inertia.</p>
-            <p class="links"><a href="https://history.siggraph.org/wp-content/uploads/2022/10/2016-Poster-66-Schvartzman_Example-Based-Data-Optimization-for-Facial-Simulation.pdf">Poster (PDF) →</a></p>
           </div>
         </article>
       </div>
