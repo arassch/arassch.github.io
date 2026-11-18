@@ -16,8 +16,8 @@
   <div class="wrap header-inner">
     <a class="brand" href="#top">Sara C. Schvartzman</a>
     <nav>
-      <a href="#projects">Projects</a>
-      <a href="#past-work">Past work</a>
+      <a href="#past-work">Work</a>
+      <a href="#projects">Robotics</a>
       <a href="#research">Research</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -37,66 +37,15 @@
       This page collects my robotics work: simulation, robot learning and the physics underneath it.
     </p>
     <div class="cta">
-      <a class="btn primary" href="#projects">See the projects</a>
+      <a class="btn primary" href="#past-work">See my work</a>
       <a class="btn" href="cv.pdf">Download CV</a>
-    </div>
-  </section>
-
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects" class="section wrap">
-    <h2>Robotics projects</h2>
-    <p class="section-intro">Robotics projects in simulation and on real hardware, each with a video.</p>
-
-    <div class="cards">
-
-      <!--
-        HOW TO ADD A PROJECT
-        Copy one <article class="card"> ... </article> block and edit it.
-        For the video, replace VIDEO_ID with the part after "v=" in the YouTube URL
-        (e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ  ->  dQw4w9WgXcQ).
-      -->
-
-      <article class="card">
-        <div class="video" data-youtube="dDGqHhmdN_c">
-          <div class="video-placeholder">Video coming soon</div>
-        </div>
-        <div class="card-body">
-          <h3>Dexterous in-hand manipulation in Isaac Lab</h3>
-          <p class="tags"><span>Isaac Lab</span><span>Reinforcement learning</span><span>Kuka + Allegro hand</span></p>
-          <p>
-            <!-- TODO: 2–3 sentences: what the task is, what you trained or changed, what you learned. -->
-            Training a Kuka arm with an Allegro hand on the DexSuite dexterous manipulation tasks in NVIDIA Isaac Lab,
-            and comparing how physics engine choices affect the learned behaviour.
-          </p>
-          <p class="links">
-            <a href="https://github.com/arassch/dexterity-physics-engines">Code on GitHub →</a>
-          </p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="video" data-youtube="7YjPlDYqvGE">
-          <div class="video-placeholder">Video coming soon</div>
-        </div>
-        <div class="card-body">
-          <p class="kicker">Personal project · 2017</p>
-          <h3>Obstacle-avoiding Arduino robot</h3>
-          <p class="tags"><span>Arduino</span><span>Differential drive</span><span>Obstacle avoidance</span><span>Hardware</span></p>
-          <p>
-            A small differential-drive robot I built and programmed on an Arduino alongside the <em>Control of Mobile Robots</em>
-            course (Georgia Tech), avoiding obstacles in real time using its front distance sensor. It has a known drift to one side
-            from unmatched motors, which closed-loop wheel-speed control would correct.
-          </p>
-        </div>
-      </article>
-
     </div>
   </section>
 
   <!-- ============ PAST WORK ============ -->
   <section id="past-work" class="section wrap">
-    <h2>Selected past work</h2>
-    <p class="section-intro">Earlier projects in haptics, computer vision and physics simulation.</p>
+    <h2>Selected work</h2>
+    <p class="section-intro">Projects in haptics, physics simulation and computer vision, from research and industry.</p>
 
     <div class="cards">
 
@@ -214,6 +163,57 @@
             Compared raw per-frame dlib landmark detection with a mean filter, pyramidal Lucas-Kanade optical flow and a
             constant-velocity Kalman filter (OpenCV) on the same webcam footage. When the face detector drops out at extreme
             poses, optical flow and the Kalman filter keep tracking the 68 landmarks, and the Kalman filter gives the smoothest result.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section wrap">
+    <h2>Recent robotics projects</h2>
+    <p class="section-intro">Smaller, hands-on projects in robot learning and hardware, each with a video.</p>
+
+    <div class="cards">
+
+      <!--
+        HOW TO ADD A PROJECT
+        Copy one <article class="card"> ... </article> block and edit it.
+        For the video, replace VIDEO_ID with the part after "v=" in the YouTube URL
+        (e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ  ->  dQw4w9WgXcQ).
+      -->
+
+      <article class="card">
+        <div class="video" data-youtube="dDGqHhmdN_c">
+          <div class="video-placeholder">Video coming soon</div>
+        </div>
+        <div class="card-body">
+          <h3>Dexterous in-hand manipulation in Isaac Lab</h3>
+          <p class="tags"><span>Isaac Lab</span><span>Reinforcement learning</span><span>Kuka + Allegro hand</span></p>
+          <p>
+            <!-- TODO: 2–3 sentences: what the task is, what you trained or changed, what you learned. -->
+            Training a Kuka arm with an Allegro hand on the DexSuite dexterous manipulation tasks in NVIDIA Isaac Lab,
+            and comparing how physics engine choices affect the learned behaviour.
+          </p>
+          <p class="links">
+            <a href="https://github.com/arassch/dexterity-physics-engines">Code on GitHub →</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="video" data-youtube="7YjPlDYqvGE">
+          <div class="video-placeholder">Video coming soon</div>
+        </div>
+        <div class="card-body">
+          <p class="kicker">Personal project · 2017</p>
+          <h3>Obstacle-avoiding Arduino robot</h3>
+          <p class="tags"><span>Arduino</span><span>Differential drive</span><span>Obstacle avoidance</span><span>Hardware</span></p>
+          <p>
+            A small differential-drive robot I built and programmed on an Arduino alongside the <em>Control of Mobile Robots</em>
+            course (Georgia Tech), avoiding obstacles in real time using its front distance sensor. It has a known drift to one side
+            from unmatched motors, which closed-loop wheel-speed control would correct.
           </p>
         </div>
       </article>
