@@ -45,29 +45,28 @@
   <!-- ============ PAST WORK ============ -->
   <section id="past-work" class="section wrap">
     <h2>Selected work</h2>
-    <p class="section-intro">Projects in haptics, physics simulation and computer vision, from research and industry.</p>
+    <p class="section-intro">Work in real-time systems, physics simulation, haptics and computer vision, from industry and research.</p>
 
     <div class="cards">
 
-      <article class="card featured">
-        <div class="video" data-youtube="qYZTjuhYAjQ">
-          <div class="video-placeholder">Video coming soon</div>
-        </div>
+      <article class="card featured text-only">
         <div class="card-body">
-          <p class="kicker">Stanford Robotics Lab · 2013–2014</p>
-          <h3>Haptic surgical simulation for facial trauma</h3>
-          <p class="tags"><span>Haptic rendering</span><span>Force feedback</span><span>Collision &amp; contact</span><span>Surgical simulation</span><span>Medical training</span></p>
+          <p class="kicker">Epic Games · 2020–present</p>
+          <h3>Control Rig and RigVM in Unreal Engine</h3>
+          <p class="tags"><span>C++</span><span>Compilers &amp; VMs</span><span>Real-time</span><span>Kinematics (FK/IK)</span><span>Tools &amp; UX</span></p>
           <p>
-            A computer-aided trauma simulation system, built with surgeons, in which they manipulate virtual bone fragments
-            through haptic devices, with real-time force feedback from contact and collisions. It was used to plan jaw fracture repair operations and to train surgeons.
+            Control Rig is Unreal Engine's node-based system for building and running character rigs in real time.
+            I develop the virtual machine and compiler at its core (RigVM), which compiles rig graphs that evaluate kinematic
+            hierarchies, including forward and inverse kinematics, every frame. I introduced function inlining, template node
+            resolution and VM debugging, all optimised for performance and memory efficiency.
           </p>
           <p>
-            User studies showed that haptic feedback improved surgeons' experience and the accuracy of fracture reduction,
-            and that the system was easy and fast for oral-maxillofacial surgeons to learn and use.
+            Alongside the runtime, I designed the modular rigging system and layered control rigs, and led the schematic viewport
+            overlay for interacting with rigs in context, working closely with technical artists, animators and product stakeholders.
           </p>
           <p class="links">
-            <a href="https://pubmed.ncbi.nlm.nih.gov/27898160/">Journal of Rehabilitation Research and Development, 2016 →</a><br>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/25234531/">Journal of Oral and Maxillofacial Surgery, 2014 →</a>
+            <a href="https://dev.epicgames.com/documentation/unreal-engine/control-rig-in-unreal-engine">Control Rig documentation →</a><br>
+            <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/modular-control-rigs-in-unreal-engine">Modular Control Rigs documentation →</a>
           </p>
         </div>
       </article>
@@ -113,23 +112,25 @@
         </div>
       </article>
 
-      <article class="card">
-        <div class="video" data-youtube="crowGP5hlA4">
+      <article class="card featured">
+        <div class="video" data-youtube="qYZTjuhYAjQ">
           <div class="video-placeholder">Video coming soon</div>
         </div>
         <div class="card-body">
-          <p class="kicker">Personal project · 2018</p>
-          <h3>Projective dynamics cloth simulation</h3>
-          <p class="tags"><span>Projective dynamics</span><span>C++ / Eigen</span><span>OpenMP</span><span>Contact &amp; friction</span><span>Cloth</span></p>
+          <p class="kicker">Stanford Robotics Lab · 2013–2014</p>
+          <h3>Haptic surgical simulation for facial trauma</h3>
+          <p class="tags"><span>Haptic rendering</span><span>Force feedback</span><span>Collision &amp; contact</span><span>Surgical simulation</span><span>Medical training</span></p>
           <p>
-            A from-scratch C++ implementation of projective dynamics (Bouaziz et al. 2014). Each time step alternates a parallel
-            local step, projecting spring and pinning constraints with OpenMP, and a global step solved with a pre-factored sparse
-            Cholesky decomposition. Contacts are added as position constraints in the global solve, with friction and restitution
-            applied to the velocities afterwards.
+            A computer-aided trauma simulation system, built with surgeons, in which they manipulate virtual bone fragments
+            through haptic devices, with real-time force feedback from contact and collisions. It was used to plan jaw fracture repair operations and to train surgeons.
           </p>
           <p>
-            The simulator also supports volumetric soft bodies (SVD-based tetrahedral strain limiting), hair strands, and collisions
-            against deforming meshes (spatial hashing) and signed distance fields.
+            User studies showed that haptic feedback improved surgeons' experience and the accuracy of fracture reduction,
+            and that the system was easy and fast for oral-maxillofacial surgeons to learn and use.
+          </p>
+          <p class="links">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/27898160/">Journal of Rehabilitation Research and Development, 2016 →</a><br>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/25234531/">Journal of Oral and Maxillofacial Surgery, 2014 →</a>
           </p>
         </div>
       </article>
@@ -163,6 +164,27 @@
             Compared raw per-frame dlib landmark detection with a mean filter, pyramidal Lucas-Kanade optical flow and a
             constant-velocity Kalman filter (OpenCV) on the same webcam footage. When the face detector drops out at extreme
             poses, optical flow and the Kalman filter keep tracking the 68 landmarks, and the Kalman filter gives the smoothest result.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="video" data-youtube="crowGP5hlA4">
+          <div class="video-placeholder">Video coming soon</div>
+        </div>
+        <div class="card-body">
+          <p class="kicker">Personal project · 2018</p>
+          <h3>Projective dynamics cloth simulation</h3>
+          <p class="tags"><span>Projective dynamics</span><span>C++ / Eigen</span><span>OpenMP</span><span>Contact &amp; friction</span><span>Cloth</span></p>
+          <p>
+            A from-scratch C++ implementation of projective dynamics (Bouaziz et al. 2014). Each time step alternates a parallel
+            local step, projecting spring and pinning constraints with OpenMP, and a global step solved with a pre-factored sparse
+            Cholesky decomposition. Contacts are added as position constraints in the global solve, with friction and restitution
+            applied to the velocities afterwards.
+          </p>
+          <p>
+            The simulator also supports volumetric soft bodies (SVD-based tetrahedral strain limiting), hair strands, and collisions
+            against deforming meshes (spatial hashing) and signed distance fields.
           </p>
         </div>
       </article>

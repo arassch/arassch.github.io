@@ -151,3 +151,8 @@ h3 { font-size: 1.1rem; margin: 0 0 6px; }
 }
 .video-picker button:hover { color: var(--text); border-color: var(--muted); }
 .video-picker button.active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+/* Card without a video (text only) */
+.card.text-only { grid-template-columns: 1fr !important; }
+.card.text-only .card-body { padding: 24px 26px; }
+.card.text-only .card-body p:not(.kicker):not(.tags):not(.links) { max-width: 75ch; }
