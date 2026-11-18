@@ -142,3 +142,12 @@ h3 { font-size: 1.1rem; margin: 0 0 6px; }
 .skills dt { color: var(--muted); font-size: 14px; padding-top: 2px; }
 .skills dd { margin: 0; }
 @media (max-width: 560px) { .skills { grid-template-columns: 1fr; gap: 2px; } .skills dd { margin-bottom: 10px; } }
+
+/* Video picker (several videos on one card) */
+.video-picker { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.video-picker button {
+  font: inherit; font-size: 13px; padding: 3px 10px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border); background: transparent; color: var(--muted);
+}
+.video-picker button:hover { color: var(--text); border-color: var(--muted); }
+.video-picker button.active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }

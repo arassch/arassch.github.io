@@ -164,6 +164,27 @@
         </div>
       </article>
 
+      <article class="card">
+        <div class="video" data-youtube="crowGP5hlA4">
+          <div class="video-placeholder">Video coming soon</div>
+        </div>
+        <div class="card-body">
+          <p class="kicker">Personal project · 2018</p>
+          <h3>Projective dynamics cloth simulation</h3>
+          <p class="tags"><span>Projective dynamics</span><span>C++ / Eigen</span><span>OpenMP</span><span>Contact &amp; friction</span><span>Cloth</span></p>
+          <p>
+            A from-scratch C++ implementation of projective dynamics (Bouaziz et al. 2014). Each time step alternates a parallel
+            local step, projecting spring and pinning constraints with OpenMP, and a global step solved with a pre-factored sparse
+            Cholesky decomposition. Contacts are added as position constraints in the global solve, with friction and restitution
+            applied to the velocities afterwards.
+          </p>
+          <p>
+            The simulator also supports volumetric soft bodies (SVD-based tetrahedral strain limiting), hair strands, and collisions
+            against deforming meshes (spatial hashing) and signed distance fields.
+          </p>
+        </div>
+      </article>
+
       <div class="mini-cards">
         <article class="mini">
           <div class="card-body">
@@ -306,17 +327,31 @@
 </footer>
 
 <script>
-  // Turn each .video[data-youtube] into a click-to-play YouTube embed.
-  // Shows the thumbnail first so the page loads fast; loads the player on click.
-  document.querySelectorAll('.video[data-youtube]').forEach(function (el) {
-    var id = el.getAttribute('data-youtube');
-    if (!id || id === 'VIDEO_ID') return; // keep the "coming soon" placeholder
+  // Click-to-play YouTube embeds: show the thumbnail first so the page loads fast.
+  function showVideo(el, id) {
+    el.setAttribute('data-youtube', id);
     el.innerHTML =
       '<button class="video-thumb" aria-label="Play video" style="background-image:url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)">' +
       '<span class="play"></span></button>';
     el.querySelector('button').addEventListener('click', function () {
       el.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
         '?autoplay=1&rel=0" title="Project video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    });
+  }
+  document.querySelectorAll('.video[data-youtube]').forEach(function (el) {
+    var id = el.getAttribute('data-youtube');
+    if (id && id !== 'VIDEO_ID') showVideo(el, id); // otherwise keep the "coming soon" placeholder
+  });
+  // Video pickers: buttons that swap which video a card shows.
+  document.querySelectorAll('.video-picker').forEach(function (picker) {
+    var card = picker.closest('.card');
+    var el = card.querySelector('.video');
+    picker.querySelectorAll('button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        picker.querySelectorAll('button').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        showVideo(el, btn.getAttribute('data-id'));
+      });
     });
   });
 </script>
